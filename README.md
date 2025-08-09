@@ -43,3 +43,11 @@ pnpm lint
 首先，进行commit init
 然后，使用命令:pnpm dlx husky-init && pnpm install
 通过以上操作之后，会在项目根目录下生成一个.husky文件夹，之下还有有一个pre-commit文件。然后对其进行修改为：pnpm lint
+
+### 如果只想对后来的代码进行检查，就是说对前面的代码不关注，我只关注我自己的代码，那么还好
+
+pnpm install lint-staged -D
+
+首先，在package.json中进行配置，1、在script中设置lint-staged的启动命令。2、增加一个lint-staged条目
+
+然后在 husky中的，pre-commit中配置

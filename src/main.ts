@@ -8,6 +8,8 @@ import pinia from './stores'
 
 const app = createApp(App)
 
+console.log(aaa)
+
 app.use(pinia)
 app.use(router)
 
